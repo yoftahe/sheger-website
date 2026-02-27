@@ -1836,3 +1836,45 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* =============================================================
+   REAL IMAGE SUPPORT
+   Overlays real <img> tags on top of .image-placeholder divs.
+   Placeholder stays visible as a loading state fallback.
+   Images added to images/ directory after running the download script.
+   ============================================================= */
+
+/* Position context for image containers that lack it */
+.service-detail-image,
+.intro-image,
+.team-photo {
+    position: relative;
+}
+
+/* Common overlay behaviour for all real images */
+.vehicle-photo,
+.service-photo,
+.intro-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    display: block;
+}
+
+/* Team photos – slightly rounded to match placeholder radius */
+.team-photo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 2;
+    display: block;
+    border-radius: 6px;
+}
