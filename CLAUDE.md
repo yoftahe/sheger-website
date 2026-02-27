@@ -143,14 +143,59 @@ All JavaScript is vanilla ES6+, wrapped in a single `DOMContentLoaded` listener.
 | `market.html` | Regional target markets for vehicle exports |
 | `marketing.html` | Numbered marketing approach cards |
 
+### Image Source — Reference Site
+
+**https://menamotors.com/ is the owner's other website.** All images on that site are owned by the same party and may be freely used on this site.
+
+When adding real images to replace placeholders:
+
+1. Download vehicle and site images directly from `https://menamotors.com/`
+2. Save them into an `images/` directory at the project root (create it if absent)
+3. Use descriptive filenames: `toyota-land-cruiser-300.jpg`, `nissan-patrol-v8.jpg`, etc.
+4. Replace each `<div class="image-placeholder ...">` with a proper `<img>` tag:
+
+```html
+<!-- Before (placeholder) -->
+<div class="vehicle-image">
+    <div class="image-placeholder vehicle-img">
+        <span>Toyota Land Cruiser 300</span>
+    </div>
+    <span class="vehicle-badge">Ready to Ship</span>
+</div>
+
+<!-- After (real image) -->
+<div class="vehicle-image">
+    <img src="images/toyota-land-cruiser-300.jpg"
+         alt="Toyota Land Cruiser 300 — GCC Spec 2024"
+         loading="lazy">
+    <span class="vehicle-badge">Ready to Ship</span>
+</div>
+```
+
+5. For team photos, replace the initials placeholder similarly:
+
+```html
+<!-- Before -->
+<div class="team-photo">
+    <div class="image-placeholder"><span>YF</span></div>
+</div>
+
+<!-- After -->
+<div class="team-photo">
+    <img src="images/team-yoftahe-fisseha.jpg" alt="Yoftahe Fisseha">
+</div>
+```
+
+6. For the hero and intro section background/showcase images, replace `.intro-img-placeholder` divs with `<img>` tags styled to `width: 100%; height: 100%; object-fit: cover; border-radius: 8px;`
+
 ### Hardcoded Business Data (Needs Real Values)
 
 The following values are placeholders and should be updated with real data:
 
 - **Phone:** `+971 XX XXX XXXX` — appears in multiple pages
 - **WhatsApp:** `https://wa.me/971000000000` — update with real number
-- **Team photos:** Gray placeholder boxes — add actual images
-- **Vehicle images:** Gray placeholder boxes — add real vehicle photos
+- **Team photos:** Gray placeholder boxes — replace using process above
+- **Vehicle images:** Gray placeholder boxes — replace using process above
 - **Vehicle inventory:** Hardcoded mock cards — no CMS or database
 
 ---
