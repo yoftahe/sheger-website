@@ -1452,3 +1452,429 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     opacity: 1;
     visibility: visible;
 }
+
+/* ============================================
+   EXTENDED COMPONENTS
+   ============================================ */
+
+/* --- Hero Grid Pattern --- */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+
+/* --- Brands Strip --- */
+.brands-strip {
+    background: var(--color-white);
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.brands-title {
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    margin-bottom: 28px;
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.brand-item {
+    font-family: var(--font-primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-silver);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 1px solid rgba(0,0,0,0.09);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.brand-item:hover {
+    color: var(--color-gray-dark);
+    border-color: var(--color-accent);
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+    background: var(--color-accent);
+    padding: 48px 0;
+}
+
+.stats-bar-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.stats-bar-item {
+    text-align: center;
+}
+
+.stats-bar-number {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stats-bar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.6);
+}
+
+.stats-bar-divider {
+    width: 1px;
+    height: 64px;
+    background: rgba(0,0,0,0.15);
+}
+
+/* --- Client Types (Who We Serve) --- */
+.client-section {
+    background: var(--color-off-white);
+}
+
+.client-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.client-type-card {
+    text-align: center;
+    padding: 48px 32px;
+    background: var(--color-white);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: var(--transition);
+}
+
+.client-type-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.client-type-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 24px;
+    color: var(--color-accent);
+}
+
+.client-type-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.client-type-card h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.client-type-card p {
+    color: var(--color-gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* --- Page Stats Strip (About page) --- */
+.page-stats {
+    background: var(--color-dark);
+    padding: 56px 0;
+}
+
+.page-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    text-align: center;
+}
+
+.page-stat-item {
+    padding: 24px 16px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.page-stat-item:last-child {
+    border-right: none;
+}
+
+.page-stat-number {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.page-stat-label {
+    font-size: 0.75rem;
+    color: var(--color-gray-light);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* --- Achievements Section (About page) --- */
+.achievements-section {
+    background: var(--color-off-white);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.achievement-card {
+    padding: 40px;
+    background: var(--color-white);
+    border-radius: 8px;
+    border-top: 3px solid var(--color-accent);
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.achievement-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.achievement-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.achievement-card h4 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.achievement-card p {
+    color: var(--color-gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* --- Objectives List (About page) --- */
+.objectives-list {
+    margin-top: 12px;
+}
+
+.objectives-list li {
+    padding: 10px 0;
+    color: var(--color-gray);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 0.97rem;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.objectives-list li:last-child {
+    border-bottom: none;
+}
+
+.objectives-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+/* --- Services Nav Overview (Services page) --- */
+.services-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 80px;
+}
+
+.service-nav-item {
+    padding: 24px;
+    background: var(--color-off-white);
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: var(--transition);
+}
+
+.service-nav-item:hover {
+    background: var(--color-black);
+    transform: translateY(-2px);
+}
+
+.service-nav-item:hover h4 {
+    color: var(--color-accent);
+}
+
+.service-nav-item:hover p {
+    color: rgba(255,255,255,0.6);
+}
+
+.service-nav-item h4 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.service-nav-item p {
+    font-size: 0.78rem;
+    color: var(--color-gray);
+}
+
+/* --- Market Page Text Utilities --- */
+.market-body-text {
+    color: var(--color-gray);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.market-subheading {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-charcoal);
+}
+
+/* --- Responsive Additions --- */
+@media (max-width: 1024px) {
+    .page-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .client-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+
+    .page-stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .page-stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .client-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-bar-divider {
+        display: none;
+    }
+
+    .brands-grid {
+        gap: 8px;
+    }
+
+    .brand-item {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+    }
+
+    .services-nav-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =============================================================
+   REAL IMAGE SUPPORT
+   Overlays real <img> tags on top of .image-placeholder divs.
+   Placeholder stays visible as a loading state fallback.
+   Images added to images/ directory after running the download script.
+   ============================================================= */
+
+/* Position context for image containers that lack it */
+.service-detail-image,
+.intro-image,
+.team-photo {
+    position: relative;
+}
+
+/* Common overlay behaviour for all real images */
+.vehicle-photo,
+.service-photo,
+.intro-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    display: block;
+}
+
+/* Team photos – slightly rounded to match placeholder radius */
+.team-photo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 2;
+    display: block;
+    border-radius: 6px;
+}
